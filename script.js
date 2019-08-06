@@ -1,13 +1,16 @@
 const black = "#000000";
 const white = "#ffffff";
 const title = "This page intentionally left ";
-let idx = 0;
 const funcs = [
   do_Bart,
   do_black,
   do_dank,
+  do_disco,
   do_blank,
 ]
+let idx = 0;
+let discoDivs = [];
+let discoInterval = null;
 
 // Run changePage every 1.5 seconds
 setInterval(changePage, 1500);
@@ -40,9 +43,46 @@ function do_dank() {
   document.getElementById("image").src = "bart_blue.png";
 }
 
+function do_disco() {
+  document.getElementById("page-text").textContent = title + "disco.";
+  document.getElementById("page-text").style.color = black;
+  // create 25 disco divs
+  for (let i = 0; i < 5; i++) {
+    for (let j = 0; j < 5; j++) {
+      let div = document.createElement("div");
+      div.className = "disco";
+      div.style.left = i * 20 + '%';
+      div.style.top = j * 20 + '%';
+      div.style.background = `rgb(${Math.floor(Math.random()*256)},
+                                  ${Math.floor(Math.random()*256)},
+                                  ${Math.floor(Math.random()*256)})`;
+      document.getElementById("container").appendChild(div);
+      discoDivs.push(div);
+    }
+  }
+  // run every 0.3 seconds
+  discoInterval = setInterval(function() {
+    // randomize color
+    for (let i = 0; i < discoDivs.length; i++) {
+      discoDivs[i].style.background = `rgb(${Math.floor(Math.random()*256)},
+                                           ${Math.floor(Math.random()*256)},
+                                           ${Math.floor(Math.random()*256)})`;
+    }
+  }, 300);
+}
+
+function clear_disco() {
+  clearInterval(discoInterval);
+  for (let i = 0; i < discoDivs.length; i++) {
+    discoDivs[i].remove();
+  }
+  discoDivs = []
+}
+
 function do_blank() {
   document.getElementById("page-text").textContent = title + "blank.";
   document.getElementById("page-text").style.color = black;
   document.body.style.backgroundColor = white;
   document.getElementById("image").remove();
+  clear_disco();
 }
