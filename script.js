@@ -6,7 +6,6 @@ const funcs = [
   do_black,
   do_dank,
   do_disco,
-  do_sad,
   do_blank,
 ]
 let idx = 0;
@@ -18,9 +17,6 @@ setInterval(changePage, 2000);
 
 // Change the page with the next function in the sequence
 function changePage() {
-  if (idx === 5) {
-    return;
-  }
   funcs[idx]();
   idx = (idx === funcs.length - 1) ? 0 : idx + 1;
 }
@@ -81,25 +77,6 @@ function clear_disco() {
     discoDivs[i].remove();
   }
   discoDivs = []
-}
-
-function do_sad() {
-  clearInterval(discoInterval);
-  document.getElementById("page-text").textContent = title + "sad.";
-  document.body.style.backgroundColor = white;
-  document.getElementById("image").remove();
-  for (let i = 0; i < discoDivs.length; i++) {
-    discoDivs[i].style.background = white;
-    discoDivs[i].style.display = "flex";
-    discoDivs[i].style.alignItems = "center";
-    discoDivs[i].style.justifyContent = "center";
-    if (i >= 10 && i <= 14) {
-      continue;
-    }
-    let h1 = document.createElement("h1");
-    h1.textContent = "☹️";
-    discoDivs[i].appendChild(h1);
-  }
 }
 
 function do_blank() {
