@@ -12,8 +12,8 @@ let idx = 0;
 let discoDivs = [];
 let discoInterval = null;
 
-// Run changePage every 1.5 seconds
-setInterval(changePage, 1500);
+// Run changePage every 2 seconds
+setInterval(changePage, 2000);
 
 // Change the page with the next function in the sequence
 function changePage() {
@@ -51,8 +51,8 @@ function do_disco() {
     for (let j = 0; j < 5; j++) {
       let div = document.createElement("div");
       div.className = "disco";
-      div.style.left = i * 20 + '%';
-      div.style.top = j * 20 + '%';
+      div.style.top = i * 20 + '%';
+      div.style.left = j * 20 + '%';
       div.style.background = `rgb(${Math.floor(Math.random()*256)},
                                   ${Math.floor(Math.random()*256)},
                                   ${Math.floor(Math.random()*256)})`;
