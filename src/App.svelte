@@ -72,8 +72,8 @@
 		{#if imageSrc}<img src={imageSrc} alt={imageSrc}>{/if}
 		{#if text}<h2 class="page-text" style="--text-color: {textColor}">{text}</h2>{/if}
 		{#if disco}
-			{#each [0, 1, 2, 3, 4, 5] as _, i}
-				{#each [0, 1, 2, 3, 4, 5] as _, j}
+			{#each [0, 1, 2, 3, 4] as _, i}
+				{#each [0, 1, 2, 3, 4] as _, j}
 					<div class="disco" style="top: {i * 20}%; left: {j * 20}%; background: {randomColor()};" />
 				{/each}
 			{/each}
