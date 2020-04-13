@@ -1,6 +1,7 @@
 <script>
   import Screen from './Screen.svelte';
   import Disco from './Disco.svelte';
+  import Sunset from './Sunset.svelte';
 
   const black = '#000';
   const white = '#fff';
@@ -17,30 +18,34 @@
       'textColor': black,
       'bgColor': white,
     }],
-    [Screen, {
-      'text': "This page intentionally left black.",
-      'textColor': white,
-      'bgColor': black,
-    }],
+    // [Screen, {
+    //   'text': "This page intentionally left black.",
+    //   'textColor': white,
+    //   'bgColor': black,
+    // }],
     [Screen, {
       'img': "bart_blue.png",
       'text': "This page intentionally left dank.",
       'textColor': white,
       'bgColor': black,
     }],
+    [Sunset, {
+      'text': "This page intentionally left sunset.",
+      'textColor': white,
+    }],
     [Disco, {
       'textColor': white,
+    }],
+    [Screen, {
+      'text': "This page intentionally left nyan cat.",
+      'textColor': yellow,
+      'bgImage': '/nyan-cat.gif',
     }],
     [Screen, {
       'text': "This page intentionally left party parrot.",
       'textColor': white,
       'bgColor': grey,
       'bgImage': '/party-parrot.gif',
-    }],
-    [Screen, {
-      'text': "This page intentionally left nyan cat.",
-      'textColor': yellow,
-      'bgImage': '/nyan-cat.gif',
     }],
   ];
 
@@ -59,7 +64,7 @@
       <svelte:component this={screen} {props} isVisible="{i === indexOn}" />
     {/each}
 
-    <div class="projects">
+    <div class="projects" id="projects">
       <h2>Projects</h2>
       <ul class="links">
         <li>
