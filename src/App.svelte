@@ -4,6 +4,11 @@
 
   const black = '#000';
   const white = '#fff';
+  const grey = '#2a2c37';
+  const pink = '#FB65B2';
+  const blue = '#72FFE4';
+  const green = '#4AFF68';
+  const yellow = '#FEFF6E';
 
   const screens = [
     [Screen, {
@@ -13,7 +18,6 @@
       'bgColor': white,
     }],
     [Screen, {
-      'img': "bart_yellow.png",
       'text': "This page intentionally left black.",
       'textColor': white,
       'bgColor': black,
@@ -26,6 +30,17 @@
     }],
     [Disco, {
       'textColor': white,
+    }],
+    [Screen, {
+      'text': "This page intentionally left party parrot.",
+      'textColor': white,
+      'bgColor': grey,
+      'bgImage': '/party-parrot.gif',
+    }],
+    [Screen, {
+      'text': "This page intentionally left nyan cat.",
+      'textColor': yellow,
+      'bgImage': '/nyan-cat.gif',
     }],
   ];
 
@@ -71,13 +86,9 @@
     align-items: center;
     justify-content: center;
   }
-  .page-text {
-    color: var(--text-color);
-  }
   .projects {
     margin-top: 50px;
     background: rgba(0, 0, 0, 0.7);
-    /*background-color: #2a2c37; /* grey */
   }
   .projects h2 {
     color: white;
