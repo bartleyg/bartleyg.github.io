@@ -39,11 +39,13 @@
     [Screen, {
       'text': "This page intentionally left nyan cat.",
       'textColor': yellow,
+      'textClass': 'outline',
       'bgImage': '/nyan-cat.gif',
     }],
     [Screen, {
       'text': "This page intentionally left party parrot.",
       'textColor': white,
+      'textClass': 'outline',
       'bgColor': grey,
       'bgImage': '/party-parrot.gif',
     }],

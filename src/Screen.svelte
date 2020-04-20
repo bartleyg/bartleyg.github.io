@@ -1,6 +1,6 @@
 <script>
   export let props, isVisible;
-  let { img, text, textColor, bgColor, bgImage } = props;
+  let { img, text, textColor, textClass, bgColor, bgImage } = props;
 
   // Defaults if not in props
   if (!img) img = 'bart_yellow.png';
@@ -16,16 +16,24 @@
   $: display = isVisible ? 'block' : 'none';
 </script>
 
-<!-- TODO: add outline option to text for legibility -->
 <div style="display: {display}">
   {#if img}<img src={img} alt={img}>{/if}
-  {#if text}<h1 class="text-color" style="--text-color: {textColor}">{text}</h1>{/if}
+  {#if text}<h1 class="text-color {textClass}" style="--text-color: {textColor}">{text}</h1>{/if}
   {#if bgImage}<div class="tiled-image" style="--bgImage: url({bgImage})"/>{/if}
 </div>
 
 <style>
   .text-color {
     color: var(--text-color);
+  }
+  .outline {
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+    /* -webkit-text-stroke-width: 1px; */
+    /* -webkit-text-stroke-color: black; */
   }
   .tiled-image {
     position: fixed;
