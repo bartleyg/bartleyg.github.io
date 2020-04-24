@@ -1,13 +1,15 @@
-# bartleygillan.com
+# [bartleygillan.com](https://bartleygillan.com)
 
-Made with the [Svelte](https://svelte.dev/) framework.
+Made with the [Svelte](https://svelte.dev) framework.
 
-Install: `yarn install`
+*TODO: figure out why rollup hot reloading doesn't work with yarn*
 
-Development: `yarn dev`
+Install: `npm install`
+
+Development: `npm run dev`
 
 Production:
 ```
-yarn build
-yarn start
+npm run build
+npm run start
 ```

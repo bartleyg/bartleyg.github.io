@@ -96,6 +96,7 @@
   .projects {
     margin-top: 50px;
     background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
   }
   .projects h2 {
     color: white;
@@ -108,6 +109,9 @@
   }
   .links li {
     padding: 8px;
+  }
+  .links li:last-child {
+    padding-bottom: 15px;
   }
   .links li:nth-child(1) a {
     color: #FB65B2;  /* pink */
