@@ -23,6 +23,9 @@
 </div>
 
 <style>
+  img {
+    max-width: 35%;
+  }
   .text-color {
     color: var(--text-color);
   }
