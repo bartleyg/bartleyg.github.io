@@ -11,18 +11,19 @@
   const green = '#4AFF68';
   const yellow = '#FEFF6E';
 
+  const screenTime = 1250;  // num milliseconds for each screen to display
   const screens = [
+    // [Screen, {
+    //   'text': "This page intentionally left black.",
+    //   'textColor': white,
+    //   'bgColor': black,
+    // }],
     [Screen, {
       'img': "bart_yellow.png",
       'text': "This page intentionally left Bart.",
       'textColor': black,
       'bgColor': white,
     }],
-    // [Screen, {
-    //   'text': "This page intentionally left black.",
-    //   'textColor': white,
-    //   'bgColor': black,
-    // }],
     [Screen, {
       'img': "bart_blue.png",
       'text': "This page intentionally left dank.",
@@ -30,8 +31,9 @@
       'bgColor': black,
     }],
     [Sunset, {
-      'text': "This page intentionally left sunset.",
+      'text': "This page intentionally sunsetting.",
       'textColor': white,
+      'screenTime': screenTime,
     }],
     [Disco, {
       'textColor': white,
@@ -51,11 +53,11 @@
     }],
   ];
 
-  // Change the screen every num milliseconds
+  // Change the screen
   let indexOn = 0;
   setInterval(() => {
     indexOn = (indexOn === screens.length - 1) ? 0 : indexOn + 1;
-  }, 1250);
+  }, screenTime);
 </script>
 
 
