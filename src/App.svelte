@@ -77,6 +77,11 @@
           </a>
         </li>
         <li>
+          <a href="https://my-spotify-mosaic.now.sh" alt="My Spotify Mosaic">
+            <b>My Spotify Mosaic</b> - <small>dynamically updated mosaic of my recently played Spotify music</small>
+          </a>
+        </li>
+        <li>
           <a href="https://spotify-play-history.now.sh" alt="Spotify Play History">
             <b>Spotify Play History</b> - <small>see your recently played Spotify songs on mobile</small>
           </a>
