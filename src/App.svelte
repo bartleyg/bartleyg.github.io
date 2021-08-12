@@ -61,36 +61,48 @@
 </script>
 
 
-<!-- TODO: add footer link to github -->
-<div class="content">
-  <div>
+<main class="content">
+  <article>
+    <h1>Bartley Gillan</h1>
     {#each screens as [screen, props], i}
       <svelte:component this={screen} {props} isVisible="{i === indexOn}" />
     {/each}
 
-    <div class="projects" id="projects">
-      <h2>Projects</h2>
+    <div class="projects">
+      <h2>
+        <a href="https://github.com/bartleyg" target="_blank" rel="noopener noreferrer">
+          Projects
+        </a>
+      </h2>
+
       <ul class="links">
         <li>
-          <a href="https://my-spotify-canvas.now.sh" alt="My Spotify Canvas">
+          <a href="https://my-spotify-canvas.vercel.app" alt="My Spotify Canvas">
             <b>My Spotify Canvas</b> - <small>dynamically updated audio video canvas of my recently played Spotify music</small>
           </a>
         </li>
         <li>
-          <a href="https://my-spotify-mosaic.now.sh" alt="My Spotify Mosaic">
+          <a href="https://my-spotify-mosaic.vercel.app" alt="My Spotify Mosaic">
             <b>My Spotify Mosaic</b> - <small>dynamically updated mosaic of my recently played Spotify music</small>
           </a>
         </li>
         <li>
-          <a href="https://spotify-play-history.now.sh" alt="Spotify Play History">
+          <a href="https://spotify-play-history.vercel.app" alt="Spotify Play History">
             <b>Spotify Play History</b> - <small>see your recently played Spotify songs on mobile</small>
           </a>
         </li>
       </ul>
     </div>
 
-  </div>
-</div>
+    <p class="footer">
+      <a href="https://github.com/bartleyg" target="_blank" rel="noopener noreferrer">
+        Made with
+        <span role="img" aria-label="red heart">❤️</span>
+        &nbsp;by Bartley Gillan
+      </a>
+    </p>
+  </article>
+</main>
 
 <style>
   .content {
@@ -100,14 +112,22 @@
     align-items: center;
     justify-content: center;
   }
+  h1 {
+    margin-top: -48.92px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
   .projects {
     margin-top: 50px;
     background: rgba(0, 0, 0, 0.7);
     border-radius: 15px;
   }
   .projects h2 {
-    color: white;
     padding-top: 10px;
+  }
+  .projects h2 a {
+    color: white;
   }
   .links {
     list-style-type: none;
@@ -131,5 +151,17 @@
   }
   .links li:nth-child(4) a {
     color: #FEFF6E; /* yellow */
+  }
+  .footer {
+    margin-top: 30px;
+    font-size: 12px;
+  }
+  .footer a {
+    color: white;
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
   }
 </style>

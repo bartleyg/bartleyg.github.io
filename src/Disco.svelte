@@ -41,8 +41,8 @@
 </script>
 
 <div style="display: {display}">
-  {#if img}<img src={img} alt={img}>{/if}
-  {#if text}<h1 class="text-color" style="--text-color: {textColor}">{text}</h1>{/if}
+  {#if img}<img src={img} alt="Bartley Gillan">{/if}
+  {#if text}<h2 class="text-color" style="--text-color: {textColor}">{text}</h2>{/if}
   {#each [0, 1, 2, 3, 4] as _, i}
     {#each [0, 1, 2, 3, 4] as _, j}
       <div class="disco" style="top: {i * 20}%; left: {j * 20}%; background: {randomColor()};" />

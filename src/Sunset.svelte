@@ -20,8 +20,8 @@
 </script>
 
 <div style="display: {display}">
-  {#if img}<img src={img} alt={img}>{/if}
-  {#if text}<h1 class="text-color" style="--text-color: {textColor}">{text}</h1>{/if}
+  {#if img}<img src={img} alt="Bartley Gillan">{/if}
+  {#if text}<h2 class="text-color" style="--text-color: {textColor}">{text}</h2>{/if}
   {#if bgImage}<div class="tiled-image" style="--bgImage: url({bgImage})"/>{/if}
   <div class="sunset-gradient"/>
   <div class="sun move-down" style="--screenTimeS: {screenTimeS}"/>
