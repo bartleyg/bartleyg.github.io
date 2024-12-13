@@ -6,7 +6,7 @@ Made with the [Svelte](https://svelte.dev) framework.
 
 Install: `npm install`
 
-Development: `npm run dev`
+Development: `npm run dev` then visit [http://127.0.0.1:5000](http://127.0.0.1:5000)
 
 Production:
 ```

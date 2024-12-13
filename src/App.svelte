@@ -20,13 +20,13 @@
     // }],
     [Screen, {
       'img': "bart_yellow.png",
-      'text': "This page intentionally left Bart.",
+      'text': "This page intentionally left blank.",
       'textColor': black,
       'bgColor': white,
     }],
     [Screen, {
       'img': "bart_blue.png",
-      'text': "This page intentionally left dank.",
+      'text': "This page intentionally left inverted.",
       'textColor': white,
       'bgColor': black,
     }],
@@ -77,13 +77,18 @@
 
       <ul class="links">
         <li>
-          <a href="https://my-spotify-canvas.vercel.app" alt="My Spotify Canvas">
-            <b>My Spotify Canvas</b> - <small>dynamically updated audio video canvas of my recently played Spotify music</small>
+          <a href="https://cloudping.vercel.app" alt="Cloud Ping">
+            <b>Cloud Ping</b> - <small>ping the cloud providers in different regions and see your latency</small>
           </a>
         </li>
         <li>
           <a href="https://my-spotify-mosaic.vercel.app" alt="My Spotify Mosaic">
             <b>My Spotify Mosaic</b> - <small>dynamically updated mosaic of my recently played Spotify music</small>
+          </a>
+        </li>
+        <li>
+          <a href="https://my-spotify-canvas.vercel.app" alt="My Spotify Canvas">
+            <b>My Spotify Canvas</b> - <small>dynamically updated audio video canvas of my recently played Spotify music</small>
           </a>
         </li>
         <li>
